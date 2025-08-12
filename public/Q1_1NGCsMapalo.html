@@ -2,13 +2,20 @@
 <body>
     <p> hi queen </p>
     <script>
-        // let, var, const, or nothing at all
-        let age=15;
-        let maxAge=100;
-        let numPerDay=3;
-        // compute how many more raments needed 
-        let totalRequired = (numPerDay*365)*(maxAge-age);
-        // display on browser
-        document.write("You will need " + totalRequired + " ramen to last until the ripe old age of " + maxAge);
+        let age= window.prompt ("What is your age?", "15");
+        let snack = window.prompt("What is your favorite snack", "Ramen");
+        let numPerDay = window.prompt("How many of this snack do you eat per day?", "5");
+        let maxAge = window.prompt("How long do you wish to live for?", "100");
+        let check = window.confirm('Are you sure this is all correct? Age = ` + age + `, Snack = ` + snack + `, #/day = ` + numPerDay + `, Expected Age = ` + maxAge)
+        if (check == true){
+            var totalRequired = (numPerDay*365) * (maxAge-age);
+            document.write(`You will need ` + totalRequired + ` units of Ramen to last you until the ripe age of ` + maxAge)
+        }
+        else{
+
+        }
+        window.alert("Run the code again"); 
+        
     </script>
 </body>
+
